@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D3640E3225637AA00F4F24D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3640E2225637AA00F4F24D /* AppDelegate.m */; };
+		6D3640E6225637AA00F4F24D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3640E5225637AA00F4F24D /* ViewController.m */; };
+		6D3640E8225637AC00F4F24D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3640E7225637AC00F4F24D /* Assets.xcassets */; };
+		6D3640EB225637AC00F4F24D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D3640E9225637AC00F4F24D /* Main.storyboard */; };
+		6D3640EE225637AC00F4F24D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3640ED225637AC00F4F24D /* main.m */; };
+		6DA4D7E022577A6900DF11A6 /* SearchDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA4D7DF22577A6900DF11A6 /* SearchDevice.m */; };
+		6DDD8E96225CC71E0036B59D /* VESC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDD8E95225CC71E0036B59D /* VESC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6D3640DE225637AA00F4F24D /* Pedaless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pedaless.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D3640E1225637AA00F4F24D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D3640E2225637AA00F4F24D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D3640E4225637AA00F4F24D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6D3640E5225637AA00F4F24D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6D3640E7225637AC00F4F24D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D3640EA225637AC00F4F24D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D3640EC225637AC00F4F24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D3640ED225637AC00F4F24D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D3640EF225637AC00F4F24D /* VESC_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VESC_MacOS.entitlements; sourceTree = "<group>"; };
+		6DA4D7DE22577A6900DF11A6 /* SearchDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchDevice.h; sourceTree = "<group>"; };
+		6DA4D7DF22577A6900DF11A6 /* SearchDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchDevice.m; sourceTree = "<group>"; };
+		6DDD8E94225CC71E0036B59D /* VESC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VESC.h; sourceTree = "<group>"; };
+		6DDD8E95225CC71E0036B59D /* VESC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VESC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D3640DB225637AA00F4F24D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D3640D5225637AA00F4F24D = {
+			isa = PBXGroup;
+			children = (
+				6D3640E0225637AA00F4F24D /* VESC_MacOS */,
+				6D3640DF225637AA00F4F24D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D3640DF225637AA00F4F24D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D3640DE225637AA00F4F24D /* Pedaless.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D3640E0225637AA00F4F24D /* VESC_MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				6DDD8E93225CC71E0036B59D /* VESC */,
+				6DA4D7DC22577A4700DF11A6 /* Screens */,
+				6D3640E1225637AA00F4F24D /* AppDelegate.h */,
+				6D3640E2225637AA00F4F24D /* AppDelegate.m */,
+				6D3640E7225637AC00F4F24D /* Assets.xcassets */,
+				6D3640E9225637AC00F4F24D /* Main.storyboard */,
+				6D3640EC225637AC00F4F24D /* Info.plist */,
+				6D3640ED225637AC00F4F24D /* main.m */,
+				6D3640EF225637AC00F4F24D /* VESC_MacOS.entitlements */,
+			);
+			path = VESC_MacOS;
+			sourceTree = "<group>";
+		};
+		6DA4D7DC22577A4700DF11A6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6DA4D7E122577A6C00DF11A6 /* Dashboard */,
+				6DA4D7DD22577A4E00DF11A6 /* SearchDevice */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6DA4D7DD22577A4E00DF11A6 /* SearchDevice */ = {
+			isa = PBXGroup;
+			children = (
+				6DA4D7DE22577A6900DF11A6 /* SearchDevice.h */,
+				6DA4D7DF22577A6900DF11A6 /* SearchDevice.m */,
+			);
+			path = SearchDevice;
+			sourceTree = "<group>";
+		};
+		6DA4D7E122577A6C00DF11A6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				6D3640E4225637AA00F4F24D /* ViewController.h */,
+				6D3640E5225637AA00F4F24D /* ViewController.m */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6DDD8E93225CC71E0036B59D /* VESC */ = {
+			isa = PBXGroup;
+			children = (
+				6DDD8E94225CC71E0036B59D /* VESC.h */,
+				6DDD8E95225CC71E0036B59D /* VESC.m */,
+			);
+			path = VESC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D3640DD225637AA00F4F24D /* Pedaless_MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D3640F2225637AC00F4F24D /* Build configuration list for PBXNativeTarget "Pedaless_MacOS" */;
+			buildPhases = (
+				6D3640DA225637AA00F4F24D /* Sources */,
+				6D3640DB225637AA00F4F24D /* Frameworks */,
+				6D3640DC225637AA00F4F24D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pedaless_MacOS;
+			productName = VESC_MacOS;
+			productReference = 6D3640DE225637AA00F4F24D /* Pedaless.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D3640D6225637AA00F4F24D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Bosko Petreski";
+				TargetAttributes = {
+					6D3640DD225637AA00F4F24D = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6D3640D9225637AA00F4F24D /* Build configuration list for PBXProject "Pedaless_MacOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D3640D5225637AA00F4F24D;
+			productRefGroup = 6D3640DF225637AA00F4F24D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D3640DD225637AA00F4F24D /* Pedaless_MacOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D3640DC225637AA00F4F24D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D3640E8225637AC00F4F24D /* Assets.xcassets in Resources */,
+				6D3640EB225637AC00F4F24D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D3640DA225637AA00F4F24D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDD8E96225CC71E0036B59D /* VESC.m in Sources */,
+				6D3640E6225637AA00F4F24D /* ViewController.m in Sources */,
+				6D3640EE225637AC00F4F24D /* main.m in Sources */,
+				6D3640E3225637AA00F4F24D /* AppDelegate.m in Sources */,
+				6DA4D7E022577A6900DF11A6 /* SearchDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D3640E9225637AC00F4F24D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D3640EA225637AC00F4F24D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D3640F0225637AC00F4F24D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6D3640F1225637AC00F4F24D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6D3640F3225637AC00F4F24D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VESC_MacOS/VESC_MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VESC_MacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "us.gsix.osx.vesc.VESC-MacOS";
+				PRODUCT_NAME = Pedaless;
+			};
+			name = Debug;
+		};
+		6D3640F4225637AC00F4F24D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VESC_MacOS/VESC_MacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = VESC_MacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "us.gsix.osx.vesc.VESC-MacOS";
+				PRODUCT_NAME = Pedaless;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D3640D9225637AA00F4F24D /* Build configuration list for PBXProject "Pedaless_MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D3640F0225637AC00F4F24D /* Debug */,
+				6D3640F1225637AC00F4F24D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D3640F2225637AC00F4F24D /* Build configuration list for PBXNativeTarget "Pedaless_MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D3640F3225637AC00F4F24D /* Debug */,
+				6D3640F4225637AC00F4F24D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D3640D6225637AA00F4F24D /* Project object */;
+}
