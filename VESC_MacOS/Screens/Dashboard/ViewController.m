@@ -33,7 +33,6 @@
     
     connectedPeripheral = peripheral;
     txCharacteristic = nil;
-    rxCharacteristic = nil;
     
     [connectedPeripheral setDelegate:self];
     [connectedPeripheral discoverServices:nil];
@@ -72,7 +71,7 @@
 -(void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     for (CBService *service in peripheral.services) {
         [self logMessage:[NSString stringWithFormat:@"Discovered service: %@", service.UUID]];
-        [peripheral discoverCharacteristics:nil forService:service];
+        [peripheral discoverCharacteristics:@[[CBUUID UUIDWithString:@"FFE1"]] forService:service];
     }
 }
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error{
@@ -83,33 +82,22 @@
 -(void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     [self logMessage:@"Discovered UART service characteristics"];
     
-    for (CBCharacteristic *aChar in service.characteristics) {
-        [self logMessage:[NSString stringWithFormat:@"Char %@", aChar]];
+    // http://www.hangar42.nl/hm10
+    // BAUD HM-10    115200   //Flashed here http://www.hangar42.nl/ccloader
+    // The HM10 has one service, 0xFFE0, which has one characteristic, 0xFFE1 (these UUIDs can be changed with AT commands by the way)
+    
+    for (CBCharacteristic *characteristic in service.characteristics) {
+        [self logMessage:[NSString stringWithFormat:@"Char %@", characteristic]];
         
-        // BAUD BleMini   57600
-        //TX BleMini:    713D0003-503E-4C75-BA94-3148F18D941E
-        //RX BleMini:    713D0002-503E-4C75-BA94-3148F18D941E
-        
-        // BAUD HM-11    9600   //Flashed here http://www.hangar42.nl/ccloader
-        //TX HM-11:      FFE1
-        //RX HM-11:      FFE1
-        
-        if ([aChar.UUID isEqual:[CBUUID UUIDWithString:@"FFE1"]]) {
-            [self logMessage:[NSString stringWithFormat:@"Found TX service: %@",aChar]];
+        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"FFE1"]]) {
+            [self logMessage:[NSString stringWithFormat:@"Found TX service: %@",characteristic]];
             
-            txCharacteristic = aChar;
-            if (rxCharacteristic != nil){
-                [self performSelector:@selector(doGetValues) withObject:nil afterDelay:0.3];
-            }
-        }
-        if ([aChar.UUID isEqual:[CBUUID UUIDWithString:@"FFE1"]]) {
-            [self logMessage:[NSString stringWithFormat:@"Found RX service: %@",aChar]];
-            rxCharacteristic = aChar;
-            [peripheral setNotifyValue:YES forCharacteristic:rxCharacteristic];
+            txCharacteristic = characteristic;
+            [peripheral setNotifyValue:YES forCharacteristic:characteristic];
             
-            if (txCharacteristic != nil){
-                [self performSelector:@selector(doGetValues) withObject:nil afterDelay:0.3];
-            }
+            writeType = characteristic.properties == CBCharacteristicPropertyWrite ? CBCharacteristicWriteWithResponse : CBCharacteristicWriteWithoutResponse;
+            
+            [self performSelector:@selector(doGetValues) withObject:nil afterDelay:0.3];
         }
     }
 }
@@ -121,7 +109,7 @@
         connectedPeripheral = nil;
     }
     [peripherals removeAllObjects];
-    [centralManager scanForPeripheralsWithServices:nil options:nil];
+    [centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:@"FFE0"]] options:nil];
     
     [self performSelector:@selector(stopSearchReader) withObject:nil afterDelay:3];
     
@@ -185,7 +173,7 @@
 -(void)doGetValues {
     [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         NSData *dataToSend = [self->vescController dataForGetValues];
-        [self->connectedPeripheral writeValue:dataToSend forCharacteristic:self->txCharacteristic type:CBCharacteristicWriteWithoutResponse];
+        [self->connectedPeripheral writeValue:dataToSend forCharacteristic:self->txCharacteristic type:self->writeType];
     }];
 }
 

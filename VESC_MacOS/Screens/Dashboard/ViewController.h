@@ -19,7 +19,7 @@
     CBPeripheral *connectedPeripheral;
     NSMutableArray *peripherals;
     CBCharacteristic *txCharacteristic;
-    CBCharacteristic *rxCharacteristic;
+    CBCharacteristicWriteType writeType;
     
     IBOutlet NSTextView *txtDebug;
     
