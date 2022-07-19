@@ -81,6 +81,32 @@ void buffer_append_int32(uint8_t* buffer, int32_t number, int32_t *index) {
 }
 
 #pragma mark - VESC Helper
+-(NSData *)dataForTerminal{
+    unsigned char buff[12];
+    int32_t ind = 0;
+    
+    buff[ind++] = 2;
+    buff[ind++] = 7; // This is the length of the payload.
+    
+    buff[ind++] = COMM_TERMINAL_CMD;
+    buff[ind++] = 'u';
+    buff[ind++] = 'p';
+    buff[ind++] = 't';
+    buff[ind++] = 'i';
+    buff[ind++] = 'm';
+    buff[ind++] = 'e';
+    
+    uint16_t crc = crc16(buff + 2,  ind - 2);
+    
+    buff[ind++] = crc >> 8;
+    buff[ind++] = crc;
+    
+    buff[ind++] = 3;
+
+    NSData *data = [NSData dataWithBytes:(const void *)buff length:sizeof(buff)];
+    return data;
+}
+
 -(NSData *)dataForGetValues{
     unsigned char buff[6];
     int32_t ind = 0;
